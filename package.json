@@ -6,14 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --check ./src",
+    "format:fix": "prettier --write ./src"
   },
   "dependencies": {
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sass": "^1.68.0"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "4.2.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -21,6 +25,7 @@
     "eslint-config-next": "latest",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
+    "prettier": "3.0.3",
     "typescript": "latest"
   }
 }
