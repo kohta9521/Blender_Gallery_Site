@@ -1,7 +1,7 @@
-"use client";
-import { FC, CSSProperties } from "react";
-import { animated } from "react-spring";
-import useMouseStalker from "./useMouseStalker";
+'use client'
+import { FC, CSSProperties } from 'react'
+import { animated } from 'react-spring'
+import useMouseStalker from './useMouseStalker'
 
 const initMouse = {
   width: 16,
@@ -10,24 +10,24 @@ const initMouse = {
   opacity: 0,
   top: 0,
   left: 0,
-};
+}
 
 const springConfig = {
   frequency: 0.2,
   damping: 2,
-};
+}
 
 const mouseStyles: CSSProperties = {
-  pointerEvents: "none",
-  position: "fixed",
+  pointerEvents: 'none',
+  position: 'fixed',
   zIndex: 100,
-  border: "solid 1px black",
-  backgroundColor: "white",
-  mixBlendMode: "difference",
-};
+  border: 'solid 1px black',
+  backgroundColor: 'white',
+  mixBlendMode: 'difference',
+}
 
 const MouseStalker: FC = () => {
-  const springStyles = useMouseStalker(initMouse, springConfig, 3);
+  const springStyles = useMouseStalker(initMouse, springConfig, 3)
 
   return (
     <animated.div
@@ -36,7 +36,7 @@ const MouseStalker: FC = () => {
         ...springStyles,
       }}
     />
-  );
-};
+  )
+}
 
-export default MouseStalker;
+export default MouseStalker

@@ -1,17 +1,17 @@
-"use client";
-import { useEffect } from "react";
-import { SpringRef } from "react-spring";
+'use client'
+import { useEffect } from 'react'
+import { SpringRef } from 'react-spring'
 
 export type Mouse = {
-  width: number;
-  height: number;
-  borderRadius: number;
-  opacity: number;
-  top: number;
-  left: number;
-};
+  width: number
+  height: number
+  borderRadius: number
+  opacity: number
+  top: number
+  left: number
+}
 
-let isOver: boolean | undefined = undefined;
+let isOver: boolean | undefined = undefined
 
 const useMouseMove = (
   initMouse: Mouse,
@@ -25,23 +25,23 @@ const useMouseMove = (
           opacity: 100,
           top: e.y - initMouse.height / (2 / times),
           left: e.x - initMouse.width / (2 / times),
-        });
+        })
       } else {
         setSpringStyles.start({
           opacity: 100,
           top: e.y - initMouse.height / 2,
           left: e.x - initMouse.width / 2,
-        });
+        })
       }
-    };
+    }
 
-    window.addEventListener("mousemove", listener);
+    window.addEventListener('mousemove', listener)
 
     return () => {
-      window.removeEventListener("mousemove", listener);
-    };
-  }, [setSpringStyles, initMouse, times]);
-};
+      window.removeEventListener('mousemove', listener)
+    }
+  }, [setSpringStyles, initMouse, times])
+}
 
 const useMouseOver = (
   initMouse: Mouse,
@@ -50,28 +50,28 @@ const useMouseOver = (
   tag: string,
 ) => {
   useEffect(() => {
-    const elements = document.querySelectorAll(tag);
+    const elements = document.querySelectorAll(tag)
     const listener = () => {
       setSpringStyles.start({
         width: initMouse.width * times,
         height: initMouse.height * times,
         borderRadius: initMouse.borderRadius * times,
-      });
+      })
 
-      isOver = true;
-    };
+      isOver = true
+    }
 
     elements.forEach((element) => {
-      element.addEventListener("mouseover", listener);
-    });
+      element.addEventListener('mouseover', listener)
+    })
 
     return () => {
       elements.forEach((element) => {
-        element.removeEventListener("mouseover", listener);
-      });
-    };
-  }, [initMouse, setSpringStyles, times, tag]);
-};
+        element.removeEventListener('mouseover', listener)
+      })
+    }
+  }, [initMouse, setSpringStyles, times, tag])
+}
 
 const useMouseOut = (
   initMouse: Mouse,
@@ -80,27 +80,27 @@ const useMouseOut = (
   tag: string,
 ) => {
   useEffect(() => {
-    const elements = document.querySelectorAll(tag);
+    const elements = document.querySelectorAll(tag)
     const listener = () => {
       setSpringStyles.start({
         width: initMouse.width,
         height: initMouse.height,
         borderRadius: initMouse.borderRadius,
-      });
+      })
 
-      isOver = false;
-    };
+      isOver = false
+    }
 
     elements.forEach((element) => {
-      element.addEventListener("mouseout", listener);
-    });
+      element.addEventListener('mouseout', listener)
+    })
 
     return () => {
       elements.forEach((element) => {
-        element.removeEventListener("mouseout", listener);
-      });
-    };
-  }, [initMouse, setSpringStyles, times, tag]);
-};
+        element.removeEventListener('mouseout', listener)
+      })
+    }
+  }, [initMouse, setSpringStyles, times, tag])
+}
 
-export { useMouseMove, useMouseOver, useMouseOut };
+export { useMouseMove, useMouseOver, useMouseOut }

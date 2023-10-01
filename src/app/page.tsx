@@ -1,14 +1,15 @@
-import MouseStalker from "@/hooks/MouseStalker";
+import MouseStalker from '@/hooks/MouseStalker'
 
 // css import
-import styles from "../styles/page.module.css";
+import styles from '../styles/page.module.css'
+import Header from '@/components/organisms/Header'
+import BasicPageLayout from '@/components/templates/BasicPageLayout'
 
 export default function Home() {
   return (
     <>
       <MouseStalker />
-      <h1>Hello</h1>
-      <a href="">sample</a>
+      <BasicPageLayout>sample code</BasicPageLayout>
     </>
-  );
+  )
 }

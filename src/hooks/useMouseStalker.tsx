@@ -1,10 +1,10 @@
-import { useSpring } from "react-spring";
-import { Mouse, useMouseMove, useMouseOver, useMouseOut } from "./mouseEvent";
+import { useSpring } from 'react-spring'
+import { Mouse, useMouseMove, useMouseOver, useMouseOut } from './mouseEvent'
 
 export type SpringConfig = {
-  frequency: number;
-  damping: number;
-};
+  frequency: number
+  damping: number
+}
 const useMouseStalker = (
   initMouse: Mouse,
   mouseConfig: SpringConfig,
@@ -13,13 +13,13 @@ const useMouseStalker = (
   const [springStyles, setSpringStyles] = useSpring(() => ({
     to: initMouse,
     config: mouseConfig,
-  }));
+  }))
 
-  useMouseMove(initMouse, setSpringStyles, times);
-  useMouseOver(initMouse, setSpringStyles, times, "a");
-  useMouseOut(initMouse, setSpringStyles, times, "a");
+  useMouseMove(initMouse, setSpringStyles, times)
+  useMouseOver(initMouse, setSpringStyles, times, 'a')
+  useMouseOut(initMouse, setSpringStyles, times, 'a')
 
-  return springStyles;
-};
+  return springStyles
+}
 
-export default useMouseStalker;
+export default useMouseStalker
