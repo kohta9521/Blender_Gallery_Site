@@ -1,5 +1,12 @@
-import styles from "../styles/page.module.scss";
+import MouseStalker from "@/hooks/MouseStalker";
+import styles from "../styles/page.module.css";
 
 export default function Home() {
-  return <div>Hello Blender!</div>;
+  return (
+    <>
+      <MouseStalker />
+      <h1>Hello</h1>
+      <a href="">sample</a>
+    </>
+  );
 }
