@@ -1,0 +1,29 @@
+.logoLink {
+  display: block;
+  width: 400px;
+  height: 80px;
+  text-decoration: none;
+}
+.logoImg {
+  display: block;
+  margin: 0 auto;
+}
+
+// props style
+.small {
+  width: 200px;
+}
+.medium {
+  width: 250px;
+}
+.large {
+  width: 300px;
+}
+.xlarge {
+  width: 400px;
+}
+
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 768px) {
+}
