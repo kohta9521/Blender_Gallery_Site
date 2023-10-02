@@ -1,26 +1,25 @@
 .logoLink {
   display: block;
-  width: 400px;
-  height: 80px;
+  width: 150px;
   text-decoration: none;
+  cursor: pointer;
 }
 .logoImg {
-  display: block;
   margin: 0 auto;
 }
 
 // props style
 .small {
-  width: 200px;
+  width: 100px;
 }
 .medium {
-  width: 250px;
+  width: 150px;
 }
 .large {
-  width: 300px;
+  width: 250px;
 }
 .xlarge {
-  width: 400px;
+  width: 300px;
 }
 
 @media screen and (max-width: 1280px) {
