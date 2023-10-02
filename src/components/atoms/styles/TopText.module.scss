@@ -1,0 +1,14 @@
+.textBox {
+  width: 100%;
+  padding: 10px 0px;
+  box-sizing: border-box;
+}
+// textはheroで指定する
+.text {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 768px) {
+}
