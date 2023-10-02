@@ -6,6 +6,7 @@ import styles from './styles/Hero.module.scss'
 // comopnents import
 import TopText from '../atoms/TopText'
 import TagText from '../atoms/TagText'
+import TagLine from '../atoms/TagLine'
 
 const Hero = () => {
   return (
@@ -27,6 +28,16 @@ const Hero = () => {
         />
       </div>
       <div className={styles.tagFlexBox}>
+        <TagText id={1} text="animals" link="/tags/animals" />
+        <TagLine />
+        <TagText id={1} text="animals" link="/tags/animals" />
+        <TagLine />
+        <TagText id={1} text="animals" link="/tags/animals" />
+        <TagLine />
+        <TagText id={1} text="animals" link="/tags/animals" />
+        <TagLine />
+        <TagText id={1} text="animals" link="/tags/animals" />
+        <TagLine />
         <TagText id={1} text="animals" link="/tags/animals" />
       </div>
     </div>
